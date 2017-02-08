@@ -23,6 +23,16 @@ wordlist = [x.upper() for x in list(open('file', 'r').readlines if 'u' in x]
   1) so we grab our items for our list, so we open a file and read each line every line is it's own item in that list. 
   2) take the first item and check if u is in it
   3) if true run it through the last function which is upper() method. then gets appended to wordlist 
-           
+            
+            
+            
+flat = [ n for row in matrix for n in row ]
+           for row in matrix:
+                for n in row:
+                    falt.append(n) 
+            
+            
+            
+                
 
 
