@@ -1,6 +1,6 @@
 """
 understanding list comprehension A.K.A. black fucking magic.
-
+http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/
 """
 
 numbers = [1, 2, 3, 4, 5]
