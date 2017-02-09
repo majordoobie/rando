@@ -54,6 +54,15 @@ flipped = {value: key for key, value in original.items()}
             
             
             
+            
+            
+            
+            
+            
+ Creating a list of lists based on how many items you want in each list.
+            data = [word for line in open(file, 'r') for word in line.split()]
+            data = [data[x: x+10] for x in range(0, len(data), 10)]
+            
                 
 
 
