@@ -33,6 +33,19 @@ flat = [ n for row in matrix for n in row ]
             
             
             
+Creating a Dictionary;
+    
+flipped = {}
+for key, value in original.items():
+    flipped[value] = key
+            
+flipped = {value: key for key, value in original.items()}     
+ 
+            
+
+            
+            
+            
                 
 
 
