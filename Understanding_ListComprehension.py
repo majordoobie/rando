@@ -46,6 +46,14 @@ flipped = {value: key for key, value in original.items()}
             
             
             
+            
+            
+  How to create a list based on how many items you want to pull in.
+            
+            shit = [data[x: x+1] for x in range(0, len(data), 5)]
+            
+            
+            
                 
 
 
