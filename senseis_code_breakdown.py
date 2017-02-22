@@ -1,6 +1,8 @@
 
 #!/usr/local/bin/python3.4
-
+"""
+Credits to nullmuse @ https://github.com/nullmuse
+"""
 import socket, subprocess, sys
 import threading
 from datetime import datetime
