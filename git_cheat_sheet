@@ -1,0 +1,64 @@
+cd ../
+mkdir new_project
+git init 
+git remote add origin https://majordoobie.github.com/new_project 
+
+
+git commit -m "New commit" 
+git push origin master 
+
+git checkout <--- pull code from repository (also allows you to checkout specific branches)
+git checkout b_branch (checkout out branch "b_branch"
+
+git pull (fetch remote code and merge it with what you got) 
+
+git clone (just pull the whole goddamn thing down) 
+
+git checkout -b new_branch (create new branch) 
+
+ 
+ 
+ 
+ 
+#### starting a new branch
+
+	git brach   				— list your branches, * shows the branch that is checkout 
+	git pull origin master   	— updates what you got 
+	git checkout -b "Name of branch"     — this allows you to checkout a new branch 
+	git checkout -b "Name of branch" master    — allows you to checkout a branch based on any repository
+	
+ 
+ 
+#### Removing what oyu have in queue "origin"
+
+	git remote -v
+	git remote rm destination/origin
+	git remote -v 
+	
+	
+#### Creating a new repository 
+	
+	Create repository via GUI
+	
+	echo "# Linux-file-encryption" >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://github.com/majordoobie/Linux-file-encryption.git
+	git push -u origin master
+	
+
+#### merging and updating
+
+git merge master
+git checkout master
+git merge *other branch*
+git add *
+git commit -m "Shit"
+git push -u orgin master
+
+
+**orgin error
+git remote add orgin https://github.com/majordoobie/FlashCards
+git pull orgin master
+git push -u orgin master
