@@ -1,0 +1,42 @@
+"""
+Description of why some special methods are needed and never called apon directly 
+"""
+
+from math import hypot
+
+class Vector:
+  def __init__(self, x=0, y=0):     # of course we call the initilizer of the super class
+                                    # Giving them values, sets them to a default while assigning a data type
+                                    
+    self.x = x
+    self.y = y
+    
+  def __repr__(self): 
+      return f"Vector({self.x, self.y})
+                                  # this should be implemented in EVERY class you make. It creates a readable representation of the object
+                                  # instead of print(obj) giving you obj at memory something you can get print(obj) = ClasnName(Values)
+                                  # Example:
+                                  #>>> import datetime
+                                  #>>> today = datetime.datetime.now()
+                                  #>>> str(today)
+                                  #   '2012-03-14 09:21:58.130922'
+                                  #>>> repr(today)
+                                  #   datetime.datetime(2012, 3, 14, 9, 21, 58, 130922)'
+                                  
+                                  # IF __str__() is not present, print(obj) will default to this.
+                                  
+                                  
+    def __add__(self, other):     # Here we are accepting two vector objects and adding them together. Note that no objecte is 
+      x = self.x + other.x        # obwritter we are just returning a NEW obect with their join of saving it into a variable
+      y = self.y + other.y        # This special function is invoked by using the " + " sign
+      return Vector(x,y)        
+      
+      
+    def __mul__(self, other):
+      x = self.x * other
+      y = self.y * other
+      return Vector(x,y)
+      
+      
+   def 
+    
