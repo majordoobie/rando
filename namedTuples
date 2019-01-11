@@ -23,3 +23,15 @@ class FrenchDeck:
 									# same idea here. Since FrenchDeck() returns a object and not a list per say, you ahve 
 									# to add the ability to interact with your obj lsit like slicing
 				return self._cards[position]
+
+
+""" Advance sourting of the deck """
+suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)     # give values to each suit
+def spades_high(card):
+	rank_value = FrenchDeck.ranks.index(card.index)      # Find the index of the number [ 2-10J-A ]
+	return rank_value * len(suit_values) + suit_value[card.rank]  # multiply by 4 so that you don' get overlapping values.	
+																	#  _2__3__4_
+																	#   3  7  11
+																	#   2  6  10
+																	#   1  5  9
+																	#   0  4  8
