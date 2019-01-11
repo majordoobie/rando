@@ -29,7 +29,7 @@ class FrenchDeck:
 suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)     # give values to each suit
 def spades_high(card):
 	rank_value = FrenchDeck.ranks.index(card.index)      # Find the index of the number [ 2-10J-A ]
-	return rank_value * len(suit_values) + suit_value[card.rank]  # multiply by 4 so that you don' get overlapping values.	
+	return rank_value * len(suit_values) + suit_value[card.rank]  # multiply by 4 so that you don' get overlapping values.	.
 																	#  _2__3__4_
 																	#   3  7  11
 																	#   2  6  10
