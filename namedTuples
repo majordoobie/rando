@@ -1,0 +1,25 @@
+"""
+Demonstration on how to use namedTuples
+"""
+
+import collections
+Card = collections.namedtuple('Card', ['rank', 'suit'])      
+
+class FrenchDeck: 
+    ranks = [str(n) for n in range(2, 11) + list('JQKA')]       # Neat way to quickly make a list of 2-10AJ-A
+    suits = 'spades diamonds clubs hears'.split()               # Never thought about making a list of words like this
+		
+		def __init__(self): 									# Start of struct
+			self._cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]  # You can have two for in listcomp?!?
+			# at this point self_cards is a list and it has __len__ but one you create the object it drops it because it turns into
+			# a class when you call it as FrenchDeck versus just being a list.
+			
+			self.__len__(self):    # This will add the ability to do len(obj). If you do dir(obj) __len__ is not listed until you 
+								   # add the method yourself. 
+								   # You can now do obj.__len__() or len(obj)
+				return len(self._cards)
+				
+			self.__getitem__(self, position):
+									# same idea here. Since FrenchDeck() returns a object and not a list per say, you ahve 
+									# to add the ability to interact with your obj lsit like slicing
+				return self._cards[position]
